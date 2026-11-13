@@ -1,0 +1,48 @@
+index,params,build_s,index_mb,setting,qps,recall10
+exact,-,0.0,118.4,-,112,1.0000
+ivf,nlist=1024,32.2,123.2,nprobe=1,47123,0.4491
+ivf,nlist=1024,32.2,123.2,nprobe=2,32019,0.6072
+ivf,nlist=1024,32.2,123.2,nprobe=4,19625,0.7473
+ivf,nlist=1024,32.2,123.2,nprobe=8,10472,0.8542
+ivf,nlist=1024,32.2,123.2,nprobe=16,5264,0.9265
+ivf,nlist=1024,32.2,123.2,nprobe=32,2473,0.9695
+ivf,nlist=1024,32.2,123.2,nprobe=64,1378,0.9902
+ivf,nlist=1024,32.2,123.2,nprobe=128,760,0.9984
+ivfpq,nlist=1024 m=5 rerank=0,47.5,10.8,nprobe=1,57601,0.3018
+ivfpq,nlist=1024 m=5 rerank=0,47.5,10.8,nprobe=2,37915,0.3700
+ivfpq,nlist=1024 m=5 rerank=0,47.5,10.8,nprobe=4,23910,0.4180
+ivfpq,nlist=1024 m=5 rerank=0,47.5,10.8,nprobe=8,14660,0.4457
+ivfpq,nlist=1024 m=5 rerank=0,47.5,10.8,nprobe=16,8015,0.4581
+ivfpq,nlist=1024 m=5 rerank=0,47.5,10.8,nprobe=32,4162,0.4641
+ivfpq,nlist=1024 m=5 rerank=0,47.5,10.8,nprobe=64,1890,0.4657
+ivfpq,nlist=1024 m=5 rerank=0,47.5,10.8,nprobe=128,974,0.4660
+ivfpq,nlist=1024 m=25 rerank=0,61.2,34.4,nprobe=1,37232,0.4477
+ivfpq,nlist=1024 m=25 rerank=0,61.2,34.4,nprobe=2,20676,0.6040
+ivfpq,nlist=1024 m=25 rerank=0,61.2,34.4,nprobe=4,9898,0.7413
+ivfpq,nlist=1024 m=25 rerank=0,61.2,34.4,nprobe=8,4270,0.8444
+ivfpq,nlist=1024 m=25 rerank=0,61.2,34.4,nprobe=16,2801,0.9126
+ivfpq,nlist=1024 m=25 rerank=0,61.2,34.4,nprobe=32,1932,0.9512
+ivfpq,nlist=1024 m=25 rerank=0,61.2,34.4,nprobe=64,1012,0.9679
+ivfpq,nlist=1024 m=25 rerank=0,61.2,34.4,nprobe=128,439,0.9742
+ivfpq,nlist=1024 m=5 rerank=100,46.1,10.8,nprobe=1,27552,0.4460
+ivfpq,nlist=1024 m=5 rerank=100,46.1,10.8,nprobe=2,22358,0.5994
+ivfpq,nlist=1024 m=5 rerank=100,46.1,10.8,nprobe=4,16568,0.7311
+ivfpq,nlist=1024 m=5 rerank=100,46.1,10.8,nprobe=8,11774,0.8263
+ivfpq,nlist=1024 m=5 rerank=100,46.1,10.8,nprobe=16,7404,0.8856
+ivfpq,nlist=1024 m=5 rerank=100,46.1,10.8,nprobe=32,4078,0.9167
+ivfpq,nlist=1024 m=5 rerank=100,46.1,10.8,nprobe=64,2201,0.9290
+ivfpq,nlist=1024 m=5 rerank=100,46.1,10.8,nprobe=128,1113,0.9334
+hnsw,M=8 efC=100,107.1,204.1,ef=10,62246,0.5544
+hnsw,M=8 efC=100,107.1,204.1,ef=20,41637,0.6945
+hnsw,M=8 efC=100,107.1,204.1,ef=40,24191,0.8056
+hnsw,M=8 efC=100,107.1,204.1,ef=80,13261,0.8902
+hnsw,M=8 efC=100,107.1,204.1,ef=160,7390,0.9437
+hnsw,M=8 efC=100,107.1,204.1,ef=320,3875,0.9748
+hnsw,M=8 efC=100,107.1,204.1,ef=640,1959,0.9903
+hnsw,M=16 efC=200,283.0,279.3,ef=10,41009,0.7149
+hnsw,M=16 efC=200,283.0,279.3,ef=20,27033,0.8342
+hnsw,M=16 efC=200,283.0,279.3,ef=40,16581,0.9194
+hnsw,M=16 efC=200,283.0,279.3,ef=80,9166,0.9691
+hnsw,M=16 efC=200,283.0,279.3,ef=160,5019,0.9906
+hnsw,M=16 efC=200,283.0,279.3,ef=320,2677,0.9980
+hnsw,M=16 efC=200,283.0,279.3,ef=640,1372,0.9997

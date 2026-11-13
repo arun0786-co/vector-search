@@ -26,16 +26,16 @@ def main(path: str) -> None:
     fig, ax = plt.subplots(figsize=(7, 4))
     for (index, params), pts in series.items():
         colour, marker = STYLE[index]
-        dashed = "rerank=100" in params or "M=8" in params or "m=25" in params
+        ls = ":" if "m=25" in params else "--" if ("rerank=100" in params or "M=8" in params) else "-"
         ax.plot([p[0] for p in pts], [p[1] for p in pts], color=colour, marker=marker, ms=4, lw=1.2,
-                ls="--" if dashed else "-", label=f"{index} {params}")
+                ls=ls, label=f"{index} {params}")
     ax.axhline(float(exact["qps"]), color="#d9d9d9", lw=1)
-    ax.text(0.31, float(exact["qps"]) * 1.15, f"exact search: {float(exact['qps']):.0f} queries/s", fontsize=8, color="#8a8a8a")
+    ax.text(0.62, float(exact["qps"]) * 1.15, f"exact search: {float(exact['qps']):.0f} queries/s", fontsize=8, color="#8a8a8a")
     ax.set_yscale("log")
     ax.set_xlabel("recall@10")
     ax.set_ylabel("queries per second, one thread")
     ax.set_xlim(0.3, 1.005)
-    ax.legend(frameon=False, fontsize=7, loc="lower left")
+    ax.legend(frameon=False, fontsize=7, loc="upper left", bbox_to_anchor=(1.01, 1.0))
     ax.set_title("GloVe-25 (1.18M vectors): speed against recall", loc="left", fontsize=10)
     ax.spines[["top", "right"]].set_visible(False)
     out = Path(path).with_name("recall_qps.png")
